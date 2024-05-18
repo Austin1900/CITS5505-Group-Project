@@ -1,0 +1,40 @@
+{% extends "base.html"%}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/talk-styles.css') }}">
+{% endblock %}
+
+{% block title%}
+MovieFun-MovieTalk
+{% endblock %}
+
+{% block body %}
+<div class="homeBody">
+    <div id="nav">
+        <ul>
+            <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
+            <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
+            <li><a class="navLink" href="movieTalk.html" id="selfPage">MOVIE TALK</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <ul class="post">
+            {% for question in questions %}
+            <li>
+                <div class="side-post">
+                    <img class="avator" src="{{ url_for('static', filename='jpg/avatar.jpeg')}}" alt="">
+                </div>
+                <div class="question-main">
+                    <div><a href="{{ url_for('qa.qa_detail', qa_id=question.id)}}">{{ question.title }}</a></div>
+                    <div>{{ question.content }}</div>
+                    <div class="question-info">
+                        <span class="question-author">{{ question.author.username }}</span>
+                        <span class="question-time">{{ question.create_time }}</span>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

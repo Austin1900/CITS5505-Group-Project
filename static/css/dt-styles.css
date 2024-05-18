@@ -1,0 +1,92 @@
+#nav ul {
+    text-align: center;
+}
+
+#nav li {
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 2%;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navLink {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#intro {
+    color: aliceblue;
+    font-weight: bold;
+}
+
+#selfPage {
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: gray;
+    padding: 7px;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.question-info {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.question-info span {
+    display: block;
+    /* This makes each span a block element, so they stack vertically */
+    margin-bottom: 5px;
+    /* Adds some space between the author and time */
+}
+
+.question-content {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 20px;
+    /* Adds space between the content and the previous element */
+}
+
+/* Additional styles for better visual appearance */
+hr {
+    border: none;
+    border-top: 1px solid white;
+    margin: 20px 0;
+}
+
+
+.btn {
+    width: 15%;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    text-align: center;
+}

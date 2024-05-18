@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Genres</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            overflow-y: auto; 
+        }
+
+        
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+    <style>
+        
+        .film-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .film {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .film img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .review {
+            display: none;
+        }
+
+        .review.active {
+            display: block;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+</head>
+<body>
+
+</head>
+<body>
+    <div class="film-container">
+        <div class="film">
+            <img src="../ images/p511118051.jpg" alt="Action Movie 1 Poster" onclick="showReview('action1')">
+            <div class="review" id="action1-review">
+                <h3>Leon: The Professional</h3>
+                <p>Lyon (played by Jean Reno) is a lonely professional killer who is hired by others. One day, the little neighbor girl Matilda (Natalie Portman) knocked on his door and asked to stay with him to avoid the danger of murder. It turns out that the owner of the neighbor's house was an informant of the police anti-narcotics team. He was punished by the police (Gary Oldman) who killed his entire family just because he embezzled a small package of drugs. Matilda was rescued by Lyon, survived, and stayed with Lyon. Lyon taught the little girl how to use a gun, and she taught Lyon French. The relationship between the two became increasingly close and they got along harmoniously.</p>
+                <div class="comment-input">
+                    <input type="text" id="commentInput" placeholder="Leave a comment">
+                    <button onclick="submitComment(1)" class="btn">Submit Comment</button>
+                    <button onclick="likeReview(1)" class="btn">Like</button>
+                </div>
+            </div>
+        </div>
+        <div class="film">
+            <img src="../ images/am2.jpg" alt="Action Movie 2 Poster" onclick="showReview('action2')">
+            <div class="review" id="action2-review">
+                <h3>Batman: The Dark Knight / TDK</h3>
+                <p>"Batman" has come out of the shadow of witnessing his parents being killed. After growing up, he is no longer the rebellious and lonely hero. With the help of Police Officer Jim Gordon and Prosecutor Harvey Dent, "Batman" continues to run around the world without any worries, fighting an endless battle against the growing criminal threats, and where he is Gotham City is also the place where the progress is most obvious. The crime rate continues to decline at an alarming rate. After all, the opponent is the "Batman" who can go to heaven and earth. Who would dare to make mistakes without borrowing two courages? However, in a city like Gotham where technology and filth coexist, peace cannot be maintained for long. As expected, a new round of chaos soon swept the entire city. People were once again enveloped in panic and claimed to be willing. The person responsible for all this is naturally the source and ruler of all chaos - the "Joker".
+                </p>
+                <div class="comment-input">
+                    <input type="text" id="commentInput" placeholder="Leave a comment">
+                    <button onclick="submitComment(1)" class="btn">Submit Comment</button>
+                    <button onclick="likeReview(1)" class="btn">Like</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 添加更多的动作片 -->
+
+        <div class="film">
+            <img src="../ images/comedy_movie1_poster.jpg" alt="Comedy Movie 1 Poster" onclick="showReview('comedy1')">
+            <div class="review" id="comedy1-review">
+                <h3>Titanic </h3>
+                <p>On April 10, 1912, the luxury liner Titanic, known as the "miracle in the history of world industry", began her maiden voyage from Southampton, England to New York, the United States. Rich girl Rose (Kate Winslet) boarded the first-class cabin with her mother and fiancé Carl; on the other side, bohemian young painter Jack (Leonardo DiCaprio) was also gambling at the pier Won a lower class ticket.
+                    Rose was tired of the hypocritical life in the upper class and was unwilling to marry Carl. She planned to commit suicide by throwing herself into the sea, but was rescued by Jack. Soon, the beautiful and lively Rose fell in love with the handsome and cheerful Jack. Jack took Rose to a dance in the lower cabin and took her portrait, and their relationship gradually heated up.
+                    April 14, 1912, Sunday night, a calm night. The Titanic hits an iceberg, the "unsinkable" Titanic faces the fate of sinking, and the budding love between Rose and Jack will also experience the test of life and death.</p>
+                <div class="comment-input">
+                    <input type="text" id="commentInput" placeholder="Leave a comment">
+                    <button onclick="submitComment(1)" class="btn">Submit Comment</button>
+                    <button onclick="likeReview(1)" class="btn">Like</button>
+                </div>
+            </div>
+        </div>
+        <div class="film">
+            <img src="../ images/comedy_movie2_poster.jpg" alt="Comedy Movie 2 Poster" onclick="showReview('comedy2')">
+            <div class="review" id="comedy2-review">
+                <h3>Farewell My Concubine</h3>
+                <p>Duan Xiaolou (Zhang Fengyi) and Cheng Dieyi (Leslie Cheung) are a pair of brothers who grew up together. One plays a male role and the other plays a female role. They have always worked together flawlessly, especially in "Farewell My Concubine". Famous in the capital, the two agreed to co-star in "Farewell My Concubine" for the rest of their lives. However, the two have fundamentally different understandings of the relationship between drama and life. Duan Xiaolou understands that drama is not life, while Cheng Dieyi is indifferent between drama and drama.
+                    Duan Xiaolou married the famous prostitute Juxian (Gong Li) when he thought it was time to get married and start a business. Cheng Dieyi believed that Juxian was a shameful third party, making Duan Xiaolou a traitor. The love-hate war born out of "Farewell My Concubine" began to escalate with the changes of the times, and eventually led to tragedy.</p>
+                <div class="comment-input">
+                    <input type="text" id="commentInput" placeholder="Leave a comment">
+                    <button onclick="submitComment(1)" class="btn">Submit Comment</button>
+                    <button onclick="likeReview(1)" class="btn">Like</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="film">
+            <img src="../ images/drama_movie1_poster1.jpg" alt="Drama Movie 1 Poster" onclick="showReview('drama1')">
+            <div class="review" id="drama1-review">
+                <h3>The Intouchables</h3>
+                <p>Because of a skydiving accident, the white rich Philippe (François Cluzet) was paralyzed in bed and wanted to hire a full-time escort. Due to the high salary, there were many applicants, all of whom were eloquent, but they could not move his heart. It wasn't until the appearance of black Driss (Omar Sy) that he made a decision. Driss had just come out of prison and was burdened with family burdens. He just wanted to find a dismissal letter to apply for relief, and he was obviously more interested in the female assistant than this job. But Philip still fell in love with this young man at first sight. So Desis began a one-month trial period. Although the comfortable environment of the mansion made him feel vain, he still faced many challenges: not only did he have to rehabilitate Philip, but he also had to bathe, enema, open letters, wear stockings, etc. At first, the two people's ways of thinking and values were very different, but as their understanding deepened, they became friends...</p>
+                <div class="comment-input">
+                    <input type="text" id="commentInput" placeholder="Leave a comment">
+                    <button onclick="submitComment(1)" class="btn">Submit Comment</button>
+                    <button onclick="likeReview(1)" class="btn">Like</button>
+                </div>
+            </div>
+        </div>
+        <div class="film">
+            <img src="../ images/drama_movie2_poster.jpg" alt="Drama Movie 2 Poster" onclick="showReview('drama2')">
+            <div class="review" id="drama2-review">
+                <h3>Modern Times </h3>
+                <p>In the 1920s, the United States was in a period of economic depression. Unemployment remained high. Workers were squeezed and became a screw in the production of large machines. Charlie (played by Charles Chaplin) is a low-level citizen. He works day and night in a factory with rumbling machines to earn a meager income. Repeated and heavy work made him breathless. He used people's noses as screws to twist them and got them entangled in the belts of the assembly line machine, which made people laugh.
+                    Although Charlie is poor, he is very kind. He rescued a homeless girl on the road and lived with her in a shabby but warm home. Every time Charlie, who was penniless, would deliberately commit a crime in order to find food in order to enter prison. The situation improved for a while, and the homeless girl became a popular singing and dancing star. However, the good times were too short-lived.</p>
+                <div class="comment-input">
+                    <input type="text" id="commentInput" placeholder="Leave a comment">
+                    <button onclick="submitComment(1)" class="btn">Submit Comment</button>
+                    <button onclick="likeReview(1)" class="btn">Like</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function showReview(movieId) {
+            const reviews = document.querySelectorAll('.review');
+            reviews.forEach(review => {
+                review.classList.remove('active');
+            });
+
+            const activeReview = document.getElementById(`${movieId}-review`);
+            activeReview.classList.add('active');
+        }
+    </script>
+    <script>
+        function showReview(reviewId) {
+            const review = document.getElementById(reviewId + '-review');
+            review.classList.add('active');
+        }
+    </script>
+
+<script>
+    function submitComment(movieId) {
+        const commentInput = document.getElementById(`commentInput${movieId}`);
+        const comment = commentInput.value.trim(); 
+        if (comment) {
+            fetch('/comment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ movieId, commentText: comment })
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data); 
+                alert('Comment added successfully'); 
+            })
+            .catch(error => {
+                console.error('Error:', error); 
+                alert('Error adding comment'); 
+            });
+
+            commentInput.value = ''; 
+        } else {
+            alert('Please enter a comment.'); 
+        }
+    }
+
+    function likeReview(movieId) {
+        fetch('/like', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ movieId })
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data); 
+            alert('Like added successfully'); 
+        })
+        .catch(error => {
+            console.error('Error:', error); 
+            alert('Error adding like'); 
+        });
+    }
+</script>
+
+</body>
+</html>

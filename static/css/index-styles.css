@@ -9,7 +9,6 @@
 }
 
 /* Nav part*/
-
 #container {
   background-color: grey;
   display: flex;
@@ -63,7 +62,7 @@
   background-image: url("../jpg/bgimg.png");
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh;
+  height: 800px;
 }
 
 #nav ul {
@@ -166,6 +165,9 @@ input[name="r"] {
   margin-left: -80%;
 }
 
+footer {
+  padding-top: 10px;
+}
 
 #copyright {
   margin-top: -10px;

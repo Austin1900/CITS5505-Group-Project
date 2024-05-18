@@ -1,80 +1,78 @@
-
 #nav ul {
-    text-align: center;
+  text-align: center;
 }
 
 #nav li {
-    display: inline-block;
-    text-align: center;
-    margin-right: 20px;
-    margin-top: 2%;
-    padding: 5px;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 2%;
+  padding: 5px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
 }
 
 .navLink {
-    text-decoration: none;
-    color: aliceblue;
+  text-decoration: none;
+  color: aliceblue;
 }
 
 #intro {
-    color: aliceblue;
-    font-weight: bold;
+  color: aliceblue;
+  font-weight: bold;
 }
 
 #selfPage {
-    border: 1px solid black;
-    border-radius: 5px;
-    color: white;
-    background-color: gray;
-    padding: 7px;
-}
-
-
-
-.content {
-    width: 80%;
-    margin: 0 auto;
-    background-color: lightgrey;
-    padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  background-color: gray;
+  padding: 7px;
 }
 
 .content {
-    list-style-type: none;
+  width: 80%;
+  margin: 0 auto;
+  background-color: lightgrey;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.content {
+  list-style-type: none;
 }
 
 .post li {
-    display: flex;
-    margin-bottom: 20px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .side-post {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .avator {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 .question-main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .question-main div {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .question-author {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .question-time {
-    color: #888;
+  color: #888;
 }
 
 .question-info {
-    text-align: right;
+  text-align: right;
 }

@@ -10,31 +10,63 @@ MovieFun-MovieTalk
 
 {% block body %}
 <div class="homeBody">
-    <div id="nav">
-        <ul>
-            <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
-            <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
-            <li><a class="navLink" href="movieTalk.html" id="selfPage">MOVIE TALK</a></li>
-        </ul>
+  <div id="nav">
+    <ul>
+      <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
+      <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
+      <li><a class="navLink" href="{{ url_for('movie_talk') }}" id="selfPage">MOVIE TALK</a></li>
+    </ul>
+  </div>
+  <form class="content" action="/movieTalk" method="post">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" aria-describedby="title">
     </div>
-    <div class="content">
-        <ul class="post">
-            {% for question in questions %}
-            <li>
-                <div class="side-post">
-                    <img class="avator" src="{{ url_for('static', filename='jpg/avatar.jpeg')}}" alt="">
-                </div>
-                <div class="question-main">
-                    <div><a href="{{ url_for('qa.qa_detail', qa_id=question.id)}}">{{ question.title }}</a></div>
-                    <div>{{ question.content }}</div>
-                    <div class="question-info">
-                        <span class="question-author">{{ question.author.username }}</span>
-                        <span class="question-time">{{ question.create_time }}</span>
-                    </div>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+    <div class="mb-3">
+      <label for="content" class="form-label">Content</label>
+      <input type="password" class="form-control" id="content1" name="content">
     </div>
+    <button type="submit" class="btn btn-secondary">Submit</button>
+  </form>
+  <form class="row content" method="get" action="/movieTalk">
+    <div class="col-auto">
+      <label for="search" class="visually-hidden">Title</label>
+      <input type="password" class="form-control" id="search" name="search" placeholder="" style="width: 400px">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-secondary mb-3">Search</button>
+    </div>
+  </form>
+  <div class="content">
+    <ul class="post">
+      {% for question in questions %}
+      <li>
+        <div class="side-post">
+          <img class="avator" src="{{ url_for('static', filename='jpg/avatar.jpeg')}}" alt="">
+        </div>
+        <div class="question-main">
+          <div><a href="{{ url_for('qa.qa_detail', qa_id=question.id)}}">{{ question.title }}</a></div>
+          <div>{{ question.content }}</div>
+          <div class="question-info">
+            <span class="question-author">{{ question.author.username }}</span>
+            <span class="question-time">{{ question.create_time }}</span>
+          </div>
+          <div style="display:flex;align-items: center">
+            <form class="row" method="post" action="/reply" style="margin-left: auto">
+              <div class="col-auto">
+                <input type="text" class="form-control" id="question_id" name="question_id" value="{{question.id}}" style="display: none">
+                <input type="text" class="form-control" id="content" name="content" placeholder=""
+                  style="width: 600px">
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-secondary mb-3">Reply</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 {% endblock %}

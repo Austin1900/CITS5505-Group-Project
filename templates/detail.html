@@ -10,50 +10,44 @@
 
 {% block body %}
 <div class="homeBody">
-    <div id="nav">
-        <ul>
-            <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
-            <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
-            <li><a class="navLink" href="movieTalk.html" id="selfPage">MOVIE TALK</a></li>
-        </ul>
-    </div>
-    <div class="content">
-        <div>
-            <div ></div>
-            <div>
-                <h3 class="page-title">{{ question.title }}</h3>
-                <p class="question-info">
-                    <span class="question-author">Author: {{ question.author.username }}</span>
-                    <span class="question-time"> Date: {{ question.create_time }}</span>
-                </p>
-                <hr>
-                <p class="question-content"> {{ question.content }}</p>
-                <hr>
-                <h4 class="comment-group-title">Comment({{ question.answers|length}}):</h4>
-                <form action="{{ url_for('qa.public_answer')}}" method="POST">
-                    <div>
-                        <input type="text" placeholder="Please type your comment" name="content" class="form-control">
-                        <input type="checkbox" name="question_id" value="{{ question.id }}">
-                        
-                    </div>
-                    <div class="form-group">
-                        <button class="btn">Comment</button>
-                    </div>
-                </form>
-                <ul class="comment-group">
-                    {% for answer in question.answers %}
-                    <li>
-                        <div>
-                            <img class="avatar" src="{{ url_for('static', filename='jpg/avatar.jpeg') }}" alt="">
-                            <span class="username">{{ answer.author.username }}</span>
-                            <span class="create-time">{{ answer.create_time }}</span>
-                        </div>
-                        <p class="comment-content">{{ answer.content }}</p>
-                    </li>
-                    {% endfor %}
-                </ul>
+  <div id="nav">
+    <ul>
+      <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
+      <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
+      <li><a class="navLink" href="/movieTalk" id="selfPage">MOVIE TALK</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div>
+      <div></div>
+      <div>
+        <h3 class="page-title">{{ question.title }}</h3>
+        <p class="question-info">
+          <span>Author: {{ question.author.username }}</span>
+          <span> Date: {{ question.creat_time }}</span>
+        </p>
+        <hr>
+        <p class="question-content"> {{ question.content }}</p>
+        <hr>
+        <h4> Comment</h4>
+        <div class="post">
+          {% for reply in replies %}
+          <li>
+            <div class="side-post">
+              <img class="avator" src="{{ url_for('static', filename='jpg/avatar.jpeg')}}" alt="">
             </div>
+            <div class="question-main">
+              <div>{{ reply.content }}</div>
+              <div class="question-info">
+                <span class="question-author">{{ reply.user.username }}</span>
+                <span class="question-time">{{ reply.create_time }}</span>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
         </div>
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %}

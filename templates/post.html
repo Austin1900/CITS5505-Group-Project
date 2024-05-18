@@ -1,4 +1,4 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/post-styles.css') }}">
@@ -10,37 +10,31 @@ MovieFun-MovieTalk
 
 {% block body %}
 <div class="homeBody">
-    <div id="nav">
-        <ul>
-            <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
-            <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
-            <li><a class="navLink" href="movieTalk.html" id="selfPage">MOVIE TALK</a></li>
-        </ul>
+  <div id="nav">
+    <ul>
+      <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
+      <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
+      <li><a class="navLink" href="movieTalk.html" id="selfPage">MOVIE TALK</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div>
+      <div></div>
+      <div>
+        <h1>Post Your Idea</h1>
+        <form action="#" method="POST">
+          <div>
+            <input type="text" name="title" class="form-control" placeholder="Please type title">
+          </div>
+          <div>
+            <textarea name="content" class="form-control" placeholder="Please type content"></textarea>
+          </div>
+          <div class="form-group">
+            <button class="btn">Post Now</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="content">
-        <div>
-            <div></div>
-            <div>
-                <h1>Post Your Idea</h1>
-                <form action="#" method="POST">
-                    <div>
-                        <input type="text" name="title" class="form-control" placeholder="Please type title">
-                    </div>
-                    <div>
-                        <textarea name="content" class="form-control" placeholder="Please type content"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn">Post Now</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
-
-
-
-
-
-
 {% endblock %}

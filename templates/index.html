@@ -6,54 +6,54 @@ MovieFun Forum
 
 {% block body %}
 <div class="homeBody">
-    <div id="nav">
-        <ul>
-            <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
-            <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
-            <li><a class="navLink" href="movieTalk.html">MOVIE TALK</a></li>
-        </ul>
-    </div>
+  <div id="nav">
+    <ul>
+      <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
+      <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
+      <li><a class="navLink" href="{{ url_for('movie_talk') }}">MOVIE TALK</a></li>
+    </ul>
+  </div>
 
-    <div class="scrollTv middle">
-        <h3 id="intro">Trending Now:</h3>
-        <div class="screen">
-            <input type="radio" name="r" id="r1" checked>
-            <input type="radio" name="r" id="r2">
-            <input type="radio" name="r" id="r3">
-            <input type="radio" name="r" id="r4">
-            <input type="radio" name="r" id="r5">
-            <div class="slide s1">
-                <img src="{{ url_for('static', filename='jpg/pic1.jpg')}}" alt="pic1"">
-                </div>
-                <div class=" slide">
-                <img src="{{ url_for('static', filename='jpg/pic2.jpg')}}" alt="pic2">
-            </div>
-            <div class="slide">
-                <img src="{{ url_for('static', filename='jpg/pic3.jpg')}}" alt="pic3">
-            </div>
-            <div class="slide">
-                <img src="{{ url_for('static', filename='jpg/pic4.jpg')}}" alt="pic4">
-            </div>
-            <div class="slide">
-                <img src="{{ url_for('static', filename='jpg/pic5.jpg')}}" alt="pic5">
-            </div>
-        </div>
-        <div id="picNav">
-            <label for="r1" class="bar"></label>
-            <label for="r2" class="bar"></label>
-            <label for="r3" class="bar"></label>
-            <label for="r4" class="bar"></label>
-            <label for="r5" class="bar"></label>
-        </div>
+  <div class="scrollTv middle">
+    <h3 id="intro">Trending Now:</h3>
+    <div class="screen">
+      <input type="radio" name="r" id="r1" checked>
+      <input type="radio" name="r" id="r2">
+      <input type="radio" name="r" id="r3">
+      <input type="radio" name="r" id="r4">
+      <input type="radio" name="r" id="r5">
+      <div class="slide s1">
+        <img src="{{ url_for('static', filename='jpg/pic1.jpg')}}" alt="pic1">
+      </div>
+      <div class=" slide">
+        <img src="{{ url_for('static', filename='jpg/pic2.jpg')}}" alt="pic2">
+      </div>
+      <div class="slide">
+        <img src="{{ url_for('static', filename='jpg/pic3.jpg')}}" alt="pic3">
+      </div>
+      <div class="slide">
+        <img src="{{ url_for('static', filename='jpg/pic4.jpg')}}" alt="pic4">
+      </div>
+      <div class="slide">
+        <img src="{{ url_for('static', filename='jpg/pic5.jpg')}}" alt="pic5">
+      </div>
     </div>
-    <div id="filmC">
+    <div id="picNav">
+      <label for="r1" class="bar"></label>
+      <label for="r2" class="bar"></label>
+      <label for="r3" class="bar"></label>
+      <label for="r4" class="bar"></label>
+      <label for="r5" class="bar"></label>
+    </div>
+  </div>
+  <div id="filmC">
 
-    </div>
-    <div id="movieN">
+  </div>
+  <div id="movieN">
 
-    </div>
-    <div id="movieT">
+  </div>
+  <div id="movieT">
 
-    </div>
+  </div>
 </div>
 {% endblock %}

@@ -1,9 +1,10 @@
-from flask import Blueprint,render_template, request, redirect, url_for,session
+from flask import Blueprint, render_template, request, redirect, url_for, session
 from exts import db
 from .forms import RegisterForms, LoginForm
 from models import UserModel
 
 bp = Blueprint("auth", __name__, url_prefix="/auth")
+
 
 @bp.route("/login", methods=['GET', 'POST'])
 def login():
@@ -25,6 +26,7 @@ def login():
             print(form.errors)
             return redirect(url_for("auth.login"))
 
+
 @bp.route("/register", methods=['GET', 'POST'])
 def register():
     if request.method == 'GET':
@@ -35,13 +37,14 @@ def register():
             email = form.email.data
             username = form.username.data
             password = form.password.data
-            user = UserModel(email=email, username=username, password=password)
+            user = UserModel(email=email, username=username, author_id=password)
             db.session.add(user)
             db.session.commit()
             return redirect(url_for("auth.login"))
         else:
             print(form.errors)
             return redirect(url_for("auth.register"))
+
 
 @bp.route("/logout")
 def logout():

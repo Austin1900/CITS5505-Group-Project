@@ -37,13 +37,12 @@ def register():
             email = form.email.data
             username = form.username.data
             password = form.password.data
-            user = UserModel(email=email, username=username, author_id=password)
+            user = UserModel(email=email, username=username, password=password)
             db.session.add(user)
             db.session.commit()
             return redirect(url_for("auth.login"))
         else:
-            print(form.errors)
-            return redirect(url_for("auth.register"))
+            return render_template("register.html", error=form.errors)
 
 
 @bp.route("/logout")

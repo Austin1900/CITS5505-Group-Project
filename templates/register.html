@@ -30,5 +30,10 @@ MovieFun-Register
     </div>
     <button type="submit">Register Now</button>
   </form>
+    {% if error %}
+    <div style="color:red;width:100%;margin-top:32px">
+      <p style="text-align:center;width:100%">{{error}}</p>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}

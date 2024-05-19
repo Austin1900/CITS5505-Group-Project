@@ -1,0 +1,73 @@
+{% extends "base.html"%}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/page2-styles.css') }}">
+{% endblock %}
+
+{% block title%}
+MovieFun Newsletter
+{% endblock %}
+
+{% block body %}
+    <div class="homeBody2">
+        <div id="nav">
+            <ul>
+                <li><a class="navLink" href="{{ url_for('mc') }}">FILM COLUMN</a></li>
+                <li><a class="navLink" href="{{ url_for('mn') }}" id="selfPage">MOVIE NEWSLETTER</a></li>
+                <li><a class="navLink" href="{{ url_for('movie_talk') }}">MOVIE TALK</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2 style="color: aliceblue;">Latest movie releases</h2>
+        </div>
+        <div class="movie-grid">
+            <div class="movie-item">
+                <a href="{{ url_for('movie1') }}" style="text-decoration: none; color: inherit;">
+                    <img src="{{ url_for('static', filename='jpg/movie1.jpg')}}" alt="Movie 1" width="300" height="450">
+                </a>
+                <a href="{{ url_for('movie1') }}" style="text-decoration: none; color: inherit;">
+                    <span style="font-size: 24px; font-weight: bold;">The Ministry of Ungentlemanly Warfare</span>
+                </a>
+            </div>
+            <div class="movie-item">
+                <a href="{{ url_for('movie2') }}" style="text-decoration: none; color: inherit;">
+                    <img src="{{ url_for('static', filename='jpg/movie2.jpg')}}" alt="Movie 2" width="300" height="450">
+                </a>
+                <a href="{{ url_for('movie2') }}" style="text-decoration: none; color: inherit;">
+                    <span style="font-size: 24px; font-weight: bold;">Ghostbusters: Frozen Empire</span>
+                </a>
+            </div>
+            <div class="movie-item">
+                <a href="{{ url_for('movie3') }}" style="text-decoration: none; color: inherit;">
+                    <img src="{{ url_for('static', filename='jpg/movie3.jpg')}}" alt="Movie 3" width="300" height="450">
+                </a>
+                <a href="{{ url_for('movie3') }}" style="text-decoration: none; color: inherit;">
+                    <span style="font-size: 24px; font-weight: bold;">Cabrini</span>
+                </a>
+            </div>
+            <div class="movie-item">
+                <a href="{{ url_for('movie4') }}" style="text-decoration: none; color: inherit;">
+                    <img src="{{ url_for('static', filename='jpg/movie4.jpg')}}" alt="Movie 4" width="300" height="450">
+                </a>
+                <a href="{{ url_for('movie4') }}" style="text-decoration: none; color: inherit;">
+                    <span style="font-size: 24px; font-weight: bold;">Kung Fu Panda 4</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+<body class="NewsSection" id="NewsSection">
+    
+
+
+
+
+
+
+    </div>

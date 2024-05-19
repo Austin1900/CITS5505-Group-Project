@@ -17,7 +17,10 @@
 <body>
   <nav id="container">
     <div id="logo" class="col-md-8">
-      <img src="{{ url_for('static', filename='jpg/logo.png') }}" alt="ForumLogo" id="ForumLogo">
+      <a href="{{ url_for('index')}}">
+        <img src="{{ url_for('static', filename='jpg/logo.png') }}" alt="ForumLogo" id="ForumLogo">
+      </a>
+      
       <p id="headP"></p>
     </div>
     <div id="login" class="col-md-4">

@@ -8,9 +8,9 @@ MovieFun Forum
 <div class="homeBody">
   <div id="nav">
     <ul>
-      <li><a class="navLink" href="filmColumn.html">FILM COLUMN</a></li>
-      <li><a class="navLink" href="movieNews.html">MOVIE NEWSLETTER</a></li>
-      <li><a class="navLink" href="{{ url_for('movie_talk') }}">MOVIE TALK</a></li>
+        <li><a class="navLink" href="{{ url_for('mc') }}">FILM COLUMN</a></li>
+        <li><a class="navLink" href="{{ url_for('mn') }}">MOVIE NEWSLETTER</a></li>
+        <li><a class="navLink" href="{{ url_for('movie_talk') }}">MOVIE TALK</a></li>
     </ul>
   </div>
 
@@ -46,14 +46,6 @@ MovieFun Forum
       <label for="r5" class="bar"></label>
     </div>
   </div>
-  <div id="filmC">
 
-  </div>
-  <div id="movieN">
-
-  </div>
-  <div id="movieT">
-
-  </div>
 </div>
 {% endblock %}

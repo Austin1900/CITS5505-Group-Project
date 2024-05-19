@@ -33,7 +33,6 @@ def index():
         ).all()
     return render_template("index.html", form=form, posts=posts)
 
-
 @app.route('/movieTalk', methods=["GET", "POST"])
 def movie_talk():
     if request.method == 'POST':
@@ -78,20 +77,26 @@ def my_before_request():
 def my_context_processor():
     return {"user": g.user}
 
+@app.route('/mn')
+def mn():
+    return render_template("movie-news.html")
 
-@app.route('/db')
-def db():
-    users = UserModel.query.all()
-    user_data = []
-    for user in users:
-        user_data.append({
-            'id': user.id,
-            'username': user.username,
-            'email': user.email,
-            'password': user.password
-        })
-    return jsonify(user_data)
+@app.route('/movie1')
+def movie1():
+    return render_template("movie1.html")
+@app.route('/movie2')
+def movie2():
+    return render_template("movie2.html")
+@app.route('/movie3')
+def movie3():
+    return render_template("movie3.html")
+@app.route('/movie4')
+def movie4():
+    return render_template("movie4.html")
 
+@app.route('/mc')
+def mc():
+    return render_template("movie-column.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
